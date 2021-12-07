@@ -6,7 +6,7 @@ namespace csharp_cli_tool
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello CLI tool!");
         }
     }
 }
