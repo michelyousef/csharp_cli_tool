@@ -13,7 +13,7 @@ namespace csharp_cli_tool
         // printing YAML formatted description of employee
         public string PrintRecords()
         {
-            return ($"- name: {FirstName} {LastName} \n  details: In division {Division} from {Date.ToString("yyyy-MM-dd")} performing {Summary}");
+            return $"- name: {FirstName} {LastName} \n  details: In division {Division} from {Date.ToString("yyyy-MM-dd")} performing {Summary}";
 
         }
 
