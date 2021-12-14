@@ -25,6 +25,7 @@ namespace csharp_cli_tool_unit_tests
 
             //Assert
             Assert.IsNotNull(myLines);
+            Assert.IsNotEmpty(myLines);
         }
     }
 }
