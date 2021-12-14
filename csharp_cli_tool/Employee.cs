@@ -18,5 +18,23 @@ namespace csharp_cli_tool
         }
 
 
+        // empty constructor
+        public Employee()
+        {
+
+        }
+
+        // Constructor with arguments
+        public Employee(string first, string last, DateTime date, Int16 division, Int16 points, string summary )
+        {
+            FirstName = first;
+            LastName = last;
+            Date = date;
+            Division = division;
+            Points = points;
+            Summary = summary;
+        }
+
+
     }
 }

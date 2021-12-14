@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace csharp_cli_tool
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -37,10 +37,8 @@ namespace csharp_cli_tool
             employees = employees.OrderBy(emp => emp.Division).ThenByDescending(emp => emp.Points).ToList();
 
             // selecting the top 3 records from the sorted list
-            List<Employee> selectedEmployees = new List<Employee>();
-            // making sure employees list has at least 3 records
-            if (employees.Count >= 3)
-            selectedEmployees = employees.Take(3).ToList();
+            List<Employee> selectedEmployees = SelectingEmployees(employees);
+            
 
             // Printing the selected employees to the console
            
@@ -82,6 +80,22 @@ namespace csharp_cli_tool
             }
 
             return employees;
+        }
+
+        public static List<Employee> SelectingEmployees(List<Employee> employees)
+        {
+            // selecting the top 3 records from the sorted list
+            List<Employee> selectedEmployees = new List<Employee>();
+            // making sure employees list has at least 3 records
+            if (employees.Count >= 3)
+                selectedEmployees = employees.Take(3).ToList();
+            else
+            {
+                Console.WriteLine("File does not have enough records!");
+                throw new ArgumentNullException();
+            }
+
+            return selectedEmployees;
         }
     }
 }
